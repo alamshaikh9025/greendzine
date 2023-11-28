@@ -1,0 +1,232 @@
+ /* below portion is for app.jsx */
+
+ .logout-btn{
+    color: #909090;
+    border-radius: 15px;
+    border: 2px solid #909090;
+    margin: 2px;
+    background-color: #000000;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+   
+ }
+
+ .app-main{
+    text-align: center;
+ }
+
+
+ /* Styles for Android devices (412 X 914 px) */
+@media only screen and (max-width: 412px) and (max-height: 914px) {
+    .greendzine-image {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    .logo-image {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .button {
+      font-size: 12px;
+    }
+    .dashboard {
+      font-size: 24px;
+    }
+    .links {
+      padding: 3px;
+      margin: 0 5px;
+    }
+    .link-image {
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  
+  /* Styles for iOS devices (390 X 834 px) */
+  @media only screen and (max-width: 390px) and (max-height: 834px) {
+    .greendzine-image {
+      margin-top: 70px;
+      margin-bottom: 30px;
+    }
+    .logo-image {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .button {
+      font-size: 16px;
+    }
+    .dashboard {
+      font-size: 28px;
+    }
+    .links {
+      padding: 4px;
+      margin: 0 8px;
+    }
+    .link-image {
+      width: 25px;
+      height: 25px;
+      margin: 0 8px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  /* end of mobile support*/
+
+
+ /* below portion is for login.jsx */
+
+.login{
+    
+   text-align: center; 
+}
+
+.login-text{
+    color: #4df5bd;
+    font-size: 65px;
+}
+
+.greendzine-image{
+    margin-top: 110px;
+    margin-bottom: 50px;
+    border: 5px solid rgb(224, 17, 14);
+    border-radius: 70%;
+    
+    
+}
+
+.textbox{
+    margin-bottom: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+.button{
+    border-radius: 5px;
+    margin: 2px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+ /* below portion is for home.jsx */
+.dashboard{
+    display: inline-block;  
+    color: #4df5bd;
+    padding: 10px;
+    /* border: 2px solid #ff0000; */
+    border-radius: 15px;
+    font-size: 36px;
+    font-weight: bold;
+    clear: both;
+}
+
+ .texts{
+    color: #0008fb;
+ }
+
+ .prod-box div {
+    text-align: center;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+
+ 
+
+  .prod-box .bordered-container {
+    display: inline-block;
+    padding: 1px; /* Adjust the padding as needed */
+    border: 2px solid #acaaaa; 
+    border-radius: 15px;
+  }
+ /*  */
+  .inline-element {
+    display: inline;
+    padding: 5px;
+    color: #909090;
+  }
+
+  .outer-box {
+    display: inline-block;
+    border: 0px solid rgb(251, 4, 4);
+    padding: 10px;
+    width: 100%;
+  }
+.links{
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.link-image {
+    width: 30px; 
+    height: 30px;
+    margin: 0 10px; 
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .logo-image{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 5px solid rgb(224, 17, 14);
+    border-radius: 70%;
+    
+    
+}
+
+ /* from here employeelist.jsx */
+
+  .employee-card {
+    display: inline-block;
+    text-align: left; 
+    margin: 5px;
+    padding: 10px;
+    padding-right: 155px;
+    border: 1px solid rgb(155, 153, 153);
+    border-radius: 10%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #4edeb0;
+  }
+
+  .employelist-text{
+    color: #4df5bd;
+    font-size: 20px;
+  }
+
+  .search {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding-bottom: 25px;
+  }
+
+  .search-form{
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  
+
+
+  
+  
+  
+  
+  
+
