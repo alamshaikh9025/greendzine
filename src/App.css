@@ -1,17 +1,81 @@
- /* below portion is for app.jsx */
+/* below portion is for app.jsx */
 
- .logout-btn{
-    color: #909090;
-    border-radius: 15px;
-    border: 2px solid #909090;
-    margin: 2px;
-    background-color: #000000;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-   
- }
+ .buttons {
+  --color: rgb(213, 181, 87);
+  font-family: inherit;
+  font-weight: 300;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: fixed; /* Position fixed from the first set */
+  top: 10px; /* Adjusted to align with the first set */
+  right: 10px; /* Adjusted to align with the first set */
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+@media (max-width : 414px) {
+  .buttons {
+    --color: rgb(213, 181, 87);
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 10px;
+    position: fixed; /* Position fixed from the first set */
+    top: 10px; /* Adjusted to align with the first set */
+    right: 10px; /* Adjusted to align with the first set */
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color); 
+  }
+  
+}
+
+.buttons:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.buttons:hover {
+  color: #fff;
+}
+
+.buttons:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.buttons:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.buttons:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
 
  .app-main{
     text-align: center;
@@ -94,38 +158,124 @@
 .greendzine-image{
     margin-top: 110px;
     margin-bottom: 50px;
-    border: 5px solid rgb(224, 17, 14);
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 70%;
     
     
 }
 
-.textbox{
-    margin-bottom: 5px;
+.textboxs{
+  padding: 10px;
+  margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 15px;
     overflow: hidden;
     background-color: #ffffff;
     font-size: 16px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
 }
 
-.button{
-    border-radius: 5px;
-    margin: 2px;
-    background-color: #ffffff;
-    font-size: 14px;
+.textboxs:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+
+.button {
+  padding: 1.3em 3em;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 400;
+  color: #000;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+
 
  /* below portion is for home.jsx */
+ 
 .dashboard{
     display: inline-block;  
-    color: #4df5bd;
+    color: #6cd626;
+    background-color: #000000b3;
     padding: 10px;
     /* border: 2px solid #ff0000; */
     border-radius: 15px;
     font-size: 36px;
     font-weight: bold;
-    clear: both;
+    clear: both;   
+    border: 2px solid rgb(229, 226, 226);
+    margin-bottom: 0.5px;
 }
+
+@media (max-width : 414px) {
+  .dashboard{
+    display: inline-block;  
+    color: #6cd626;
+    background-color: #000000b3;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16.5px;
+    font-weight: bold;
+    clear: both;   
+    border: 2px solid rgb(229, 226, 226);
+    margin-bottom: 0.5px;
+} 
+  
+}
+
+.color-box {
+  display: flex;
+  justify-content: center;
+  background-color: #cdb9b982;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  margin-left: 432px;
+  margin-right: 432px;
+  border: 2px solid rgb(136, 124, 124);
+  border-radius: 15px; 
+}
+
+@media (max-width : 414px) {
+  .color-box {
+    display: flex;
+  justify-content: center;
+  background-color: #494b5b;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 5px solid #43b746;
+  border-radius: 15px; 
+  } 
+  
+}
+
 
  .texts{
     color: #0008fb;
@@ -133,14 +283,14 @@
 
  .prod-box div {
     text-align: center;
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    margin-bottom: 10px; 
   }
 
  
 
   .prod-box .bordered-container {
     display: inline-block;
-    padding: 1px; /* Adjust the padding as needed */
+    padding: 1px; 
     border: 2px solid #acaaaa; 
     border-radius: 15px;
   }
@@ -148,16 +298,21 @@
   .inline-element {
     display: inline;
     padding: 5px;
-    color: #909090;
+    color: #4edeb0;
   }
 
   .outer-box {
-    display: inline-block;
+    display: block;
+    text-align: center;
     border: 0px solid rgb(251, 4, 4);
     padding: 10px;
     width: 100%;
+    background-color: #000000;
   }
-.links{
+
+
+
+  .links{
     padding: 5px;
     margin: 0 10px;
 }
@@ -174,16 +329,20 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #f2f2f2;
-    padding: 10px;
-    text-align: center;
+    background-color: #a6d7bb;
+    padding: 0.5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+    
   }
 
   .logo-image{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 5px solid rgb(224, 17, 14);
+    border: 5px solid #ffffff;
     border-radius: 70%;
     
     
@@ -207,8 +366,10 @@
   .employelist-text{
     color: #4df5bd;
     font-size: 20px;
+    margin-bottom: 80px;
   }
 
+  /* 
   .search {
     display: block;
     width: 100%;
@@ -216,17 +377,124 @@
     padding-bottom: 25px;
   }
 
+ 
+
   .search-form{
     font-size: 15px;
     border-radius: 8px;
   }
 
-  
+  */ 
+
+ /*  New custom search by neomorphism 
+
+ .textInputWrapper {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  margin: 12px 5px;
+  --accent-color: #a3e583;
+}
+*/
+
+.textInputWrapper {
+  display: block;
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 20%;
+  margin: 12px 5px;
+  --accent-color: #5aff07;
+}
+
+@media (max-width: 767px) {
+  .textInputWrapper {
+    top: 32%; 
+    left: 50%;
+    width: 60%; 
+  }
+}
 
 
-  
-  
-  
-  
-  
+.textInputWrapper:before,
+.textInputWrapper:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
 
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgb(253, 194, 0);
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.textInput::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 3;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.textInputWrapper .textInput {
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+  max-height: 36px;
+  background-color: #252525;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  outline: none;
+}
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  background-color: #353535;
+}
+
+.textInputWrapper:focus-within .textInput::placeholder {
+  opacity: 0;
+} 

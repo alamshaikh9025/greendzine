@@ -21,7 +21,7 @@ const Home = ({ employeeData, isLoggedIn }) => {
           <img src={logo} alt="logo image" width="150" height="150" className='logo-image'/>
           </div>
           <h2 className='dashboard'>𝔼𝕞𝕡𝕝𝕠𝕪𝕖𝕖 ℙ𝕣𝕠𝕕𝕦𝕔𝕥𝕚𝕧𝕚𝕥𝕪 𝔻𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕</h2>
-          <div className='outer-box'>
+          <div className='color-box'>
           <div className='prod-box'>
             {Object.keys(employeeData[0].productivity).map((day) => (
               <div key={day} className='prod-info'>
@@ -33,15 +33,18 @@ const Home = ({ employeeData, isLoggedIn }) => {
             ))}
           </div>
           </div>
-          <div className="bottom-navigation">
-            <Link to="/">
-                <img className='link-image' src={home} alt="Home" />
-            </Link>
-            <Link to="/employee-list">
-                <img className='link-image' src={user} alt="Employee List" />
-            </Link>
-          </div>
-        </div>
+          
+          
+        <div className="bottom-navigation">
+        <Link to="/">
+          <img className='link-image' src={home} alt="Home" />
+        </Link>
+        <Link to="/employee-list">
+          <img className='link-image' src={user} alt="Employee List" />
+        </Link>
+      </div>
+      
+    </div>
       ) : null}
     </div>
   );

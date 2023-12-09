@@ -21,7 +21,7 @@ const App = () => {
     <Router>
       <div >
         {isLoggedIn && (
-         <button className='logout-btn' onClick={handleLogout}>Logout</button> 
+         <button className='buttons' onClick={handleLogout}>Logout</button> 
         )}
       </div>
 

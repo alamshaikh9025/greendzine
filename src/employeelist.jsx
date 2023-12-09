@@ -28,7 +28,11 @@ const EmployeeList = ({ employeeData }) => {
             <h2 >𝔼𝕞𝕡𝕝𝕠𝕪𝕖𝕖 𝕃𝕚𝕤𝕥</h2>
         </div>
          <div className='search'>
-             <input type="text" value={search} onChange={handleChange} placeholder="🔍 Search by name" className='search-form'/>
+          {/*(old code)  <input type="text" value={search} onChange={handleChange} placeholder="🔍 Search by name" className='search-form'/> */}
+          <div className="textInputWrapper">
+              <input placeholder=" 🔍 Search Employees" type="text" onChange={handleChange} className="textInput"   />
+          </div>
+          
          </div> 
     
       {filterByName(employeeData).map((employee) => (
