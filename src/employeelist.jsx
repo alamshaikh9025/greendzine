@@ -4,6 +4,8 @@ import './App.css';
 import home from '../images/home.png'
 import user from '../images/user.png'
 import logo from '../images/logo.png'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const EmployeeList = ({ employeeData }) => {
   // Create a state variable to store the search input

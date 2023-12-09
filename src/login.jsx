@@ -1,25 +1,55 @@
 import React, { useState } from 'react';
 import './App.css'; 
 import greendzine from '../images/greendzine.png';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({ onLogin }) => {
-  const [email, setEmail] = useState('alam');
-  const [password, setPassword] = useState('alam');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
     // to Check if the credentials are correct (dummy check)
-    if (email === 'alam' && password === 'alam') {
+    if (email === 'alam@gmail.com' && password === 'alam') {
+      toast.success('Login Successful', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       onLogin(); // Call the onLogin prop passed from the parent component
       setIsLoggedIn(true); 
     } else {
-      alert('Invalid credentials');
+      toast.error('Invalid Credentials', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
 
   const forgot_password = () => {
    
-    alert('Password sent to email.');
+    toast.info('Password sent to E-Mail', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
   };
 
  
@@ -31,11 +61,11 @@ const Login = ({ onLogin }) => {
         <img src={greendzine} alt="greendzine image" width="150" height="150" className='greendzine-image'/>
         <h2 className='login-text'>꒒ꂦꁅꀤꈤ</h2>
         <label>
-        <input className='textboxs' type="text" placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input className='textboxs'  type="text" placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
         </label>
         <br />
         <label>
-        <input className='textboxs' type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input className='textboxs' type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required/>
         </label>
         </div>
         <br/>

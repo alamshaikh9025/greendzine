@@ -5,6 +5,8 @@ import EmployeeList from './employeelist';
 import Login from './login';
 import employeeData from './employee';
 import './App.css'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,10 +17,32 @@ const App = () => {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
+    toast.success('Logout Successful', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
   };
 
   return (
     <Router>
+      <div><ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/></div>
       <div >
         {isLoggedIn && (
          <button className='buttons' onClick={handleLogout}>Logout</button> 
@@ -35,9 +59,7 @@ const App = () => {
         ) : (
           <Login onLogin={handleLogin} />
         )}
-
-
-      </div>
+  </div>
     </Router>
   );
 };
