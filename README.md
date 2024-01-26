@@ -2,8 +2,8 @@
 
 To view live demo of this webpage go to [Greendzine](https://alam-greendzine.netlify.app/)
 
-This is a simple webpage created using react 
-    It has 2 pages 1)A Dashboard and 2) A search employee list function
+This is a simple webpage created using react,
+    It has 2 pages<br> 1)A Dashboard <br> 2) A search employee list function
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
